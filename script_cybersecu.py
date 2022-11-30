@@ -8,7 +8,7 @@ print(chemin_fichier)
 
 file = open(chemin_fichier, 'r')
 lines = file.readlines()
-os.system('sudo nping --icmp -c 1 '+ip_cible+' --data-string BOFfile.txt ')
+os.system('sudo nping --icmp -c 1 '+ip_cible+' --data-string '+chemin_fichier)
 
 for index, line in enumerate(lines):
     #print("Ligne {}: {}".format(index, line.strip()))
